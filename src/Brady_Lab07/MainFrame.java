@@ -17,13 +17,10 @@ public class MainFrame extends JFrame {
         setVisible(true);
     }
 
-    public void MacLayoutSetup()
-    {
-        try
-        {
+    public void MacLayoutSetup() {
+        try {
             UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
-        } catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

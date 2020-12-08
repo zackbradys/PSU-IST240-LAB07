@@ -23,7 +23,6 @@ class Student {
     }
 
     public double semesterGPA() {
-
         double rdn = random.nextDouble();
         GPA = Math.round((rdn * 4.0) * 10.0) / 10.0;
         return GPA;
