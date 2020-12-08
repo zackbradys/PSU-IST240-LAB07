@@ -1,8 +1,0 @@
-
-/**
- *
- * @author zackb
- */
-class student {
-    
-}
