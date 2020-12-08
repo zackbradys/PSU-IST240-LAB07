@@ -1,31 +1,48 @@
 // Student.java
 // Zack Brady | IST 240
 
-import java.util.Random;
+public class Student {
 
-class Student {
+    private String firstName;
+    private String lastName;
+    private int age;
+    private double GPA;
 
-    String fName;
-    String lName;
-    int age;
-    Random random = new Random();
-    double GPA = (random.nextDouble() * 4.0);
-
-    Student(String fName, String lName, int age) {
-        this.fName = fName;
-        this.lName = lName;
+    public Student(String firstName, String lastName, int age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.age = age;
-        this.GPA = semesterGPA();
+        this.GPA = SemesterGPA();
     }
 
     public String getName() {
-        return this.fName + " " + this.lName;
+        return firstName + " " + lastName;
     }
 
-    public double semesterGPA() {
-        double rdn = random.nextDouble();
-        GPA = Math.round((rdn * 4.0) * 10.0) / 10.0;
+    public String getfirstName() {
+        return firstName;
+    }
+
+    public String getlastName() {
+        return lastName;
+    }
+
+    public double getAge() {
+        return age;
+    }
+
+    public double getGPA() {
         return GPA;
     }
 
+    public String getStudentInfo() {
+        return getName() + "  " + getAge() + " " + getGPA();
+    }
+    
+    public double SemesterGPA() {
+        double RandomGPA = (Math.random() * 4.00) + 0.00;
+        GPA = RandomGPA;
+        return RandomGPA;
+    }
 }
+
